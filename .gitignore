@@ -1,3 +1,4 @@
 venv
 .pytest_cache
 git_commit.sh
+__pycache__
