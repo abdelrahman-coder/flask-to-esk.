@@ -1,4 +1,4 @@
-FROM python:3.7.2-slim
+FROM python:stretch
 
 RUN mkdir app
 WORKDIR app
