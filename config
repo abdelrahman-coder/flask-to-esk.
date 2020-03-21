@@ -1,0 +1,28 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01ETXhPREU0TkRVMU1Wb1hEVE13TURNeE5qRTRORFUxTVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTW1HCjB1Q3p6Y3JMU21TZUwxUFE1YkEzQzRoTDhSUExHL3l6OWJxNVJCM0NUbVp6TCtDVmJUNHBzZmN6YnpJVjdoQ1oKNUQvZHdJd0tEQ2xkd2Z6WVVUMnovZEt3SUZjR1dGaWZQRk9pT2RwdTcrWnZQSGJvL2lHZVV5U2NUeXBvSjJ5aAo3M2hWVm9CY21nTzFnVUN0bHFlU2xYcUY2K1kzNHo3Ymd6N2ZYOEhabFpGcTRHK0svakpWODc1eWc3aVZIU3VECnRCOGpTQll6YjdDUkJlaHZxYU1hRnNqQUxobzBkTEEreTlwVEJUcmx5c0k1cWdUMUpuWmpNVHpCcUdRcVpScXQKOGplZ0JYL0FveFIwRjdzODZPUlhVajJ1Y0tRYnhOb091bWZqQjBUZjBkK3FTdGEyNVloNEZLVlQ5WnFPWlFzSgpzRFBwODAwaTVnT1FqS2Z6ZURNQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFJSERHejJESHJsV05ka3RtSWN5YW9rdmx0RnoKaklSN3luNk1jYkxxOEg0OWt6Q2t6ekNCWEZDOVNySEhqOUQ0MVVmM3B2ak5wZVBIS1JvbHExN1pJaE41d0pFbgoycGgrTkpGb2FQaDgvcXV4SndEaUhwZlg5MW1CMGhOL095dUJkemJEbzNwK1NKSTZ5RjdUYzUzNmROYUxLK0lICnQwSHJCNFRFOEZlaG0xUGxqTUljRUg1RGZ0VmxMRU9xRjZxWmF4Y1VWRzJoV1ltWVBiS1pCcW5ERDB1UkwveW0KbzhZamNNdkVhQ0ZaRnNLcllPcXkza0JqYUhJM3A4a05naUJhM1lPZjdLRk1Na3dlWWNaeWxBdWM3TTBjVmt4YgpZaXhCOGtId1BaT2hnQzZabGRyeDlEbDgyeTkvNnZxekRBZ09KVU8rZ0FhYlc2MGdjcmpJbjY1WUZiTT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://482CC20A01CC6835794B20BAECF4DB1A.gr7.us-west-2.eks.amazonaws.com
+  name: simple-jwt-api.us-west-2.eksctl.io
+contexts:
+- context:
+    cluster: simple-jwt-api.us-west-2.eksctl.io
+    user: iam-root-account@simple-jwt-api.us-west-2.eksctl.io
+  name: iam-root-account@simple-jwt-api.us-west-2.eksctl.io
+current-context: iam-root-account@simple-jwt-api.us-west-2.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: iam-root-account@simple-jwt-api.us-west-2.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - simple-jwt-api
+      - --region
+      - us-west-2
+      command: aws
+      env: null

@@ -34,3 +34,12 @@ def check_token(token):
 
 token = get_token()
 print(check_token(token))
+
+
+
+
+
+class Mul:
+    def __init__(self,n):
+        self.n = n
+    def __power__(self,fles):
