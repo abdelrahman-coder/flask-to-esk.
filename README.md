@@ -16,6 +16,8 @@ The app relies on a secret set as the environment variable `JWT_SECRET` to produ
 1. Fork this project to your Github account.
 2. Locally clone your forked version to begin working on the project.
 
+to run the container locally  `docker run -p 127.0.0.1:8080:8080 flask_eks`
+
 ## Dependencies
 
 - Docker Engine
