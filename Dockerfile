@@ -5,12 +5,12 @@ WORKDIR app
 #Copy files
 COPY requirements.txt .
 COPY main.py .
-RUN ls
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 EXPOSE 8080
-CMD ["gunicorn", "main:APP","-b", ":8080"]
+ENTRYPOINT ["gunicorn"  , "-b", ":8080", "main:APP"]
+#CMD ["gunicorn", "main:APP","-b", ":8080"]
 
 
 
