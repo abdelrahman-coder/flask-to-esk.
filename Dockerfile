@@ -12,6 +12,4 @@ EXPOSE 8080
 ENTRYPOINT ["gunicorn"  , "-b", ":8080", "main:APP"]
 #CMD ["gunicorn", "main:APP","-b", ":8080"]
 
-
-
 #CMD ["gunicorn", "app:APP", "-b", "0.0.0.0:8080"]
