@@ -1,3 +1,5 @@
 export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X POST <EXTERNAL-IP URL>/auth  | jq -r '.token'`
 
 export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X GET a513859296ba111eaa0da0e8387c1a80-1573041465.us-west-2.elb.amazonaws.com/auth  | jq -r '.token'`
+
+export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X GET  a513859296ba111eaa0da0e8387c1a80-1573041465.us-west-2.elb.amazonaws.com/  | jq -r '.token'`
